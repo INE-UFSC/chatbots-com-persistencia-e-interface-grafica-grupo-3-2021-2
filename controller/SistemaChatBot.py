@@ -1,4 +1,5 @@
 from model.Bots.Bot import Bot
+from model.BotDAO import BotDAO
 
 
 class SistemaChatBot:
