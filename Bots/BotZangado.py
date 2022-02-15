@@ -1,28 +1,31 @@
 from Bots.Bot import Bot
+from Comando import Comando
 
 class BotZangado(Bot):
-    def __init__(self,nome):
-        self.__nome = nome
+    def __init__(self, nome):
+        super().__init__(nome)
+        super().__comandos = {
+            1: Comando(1, "Olá, tudo bem? ", [f"E o que tem de bom?!"]),
+            2: Comando(2, "Como você está ?", ["Não interessa!"]),
+            3: Comando(3, "Quero um conselho", ["Não tenho filho deste tamanho!"]),
+            4: Comando(4, "Adeus", [""])
+        }
 
-    #nao esquecer o decorator
-    def nome(self):
-        pass
-
-    #nao esquecer o decorator
-    def nome(nome):
-        pass
+    
+    def mostra_comandos(self):
+        return self.__comandos
 
     def apresentacao(self):
-        pass
- 
-    def mostra_comandos(self):
-        pass
-    
-    def executa_comando(self,cmd):
-        pass
+        return f'GRRRRRR Meu nome é {self.nome} e não me incomode!'
+
+    def executa_comando(self, cmd):
+        try:
+            return self.__comandos[cmd]
+        except:
+            print("NÃO SEI!")
 
     def boas_vindas(self):
-        pass
+        return 'Não acredito que você me escolheu!'
 
     def despedida(self):
-        pass
+        return 'Finalmente, até nunca mais! '
