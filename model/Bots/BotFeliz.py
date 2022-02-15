@@ -1,5 +1,5 @@
 from Bots.Bot import Bot
-from Comando import Comando
+from model.Comando import Comando
 
 
 class BotFeliz(Bot):

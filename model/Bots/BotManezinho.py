@@ -1,8 +1,9 @@
 from Bots.Bot import Bot
-from Comando import Comando
+from model.Comando import Comando
+
 
 class BotManezinho(Bot):
-    def __init__(self,nome):
+    def __init__(self, nome):
         self.__nome = nome
         super().__comandos = {
             1: Comando(1, "Ô meu querido, quesh saber quantas praias existem na nossa linda ilha da magia?", ["\nA nossa belíssima ilha conta com incríveis 42 praias!"]),
@@ -28,8 +29,8 @@ class BotManezinho(Bot):
 
     def mostra_comandos(self):
         return self.__comandos
-    
-    def executa_comando(self,cmd):
+
+    def executa_comando(self, cmd):
         try:
             return self.__comandos[cmd]
 

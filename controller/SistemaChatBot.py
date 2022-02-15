@@ -1,4 +1,4 @@
-from Bots.Bot import Bot
+from model.Bots.Bot import Bot
 
 
 class SistemaChatBot:

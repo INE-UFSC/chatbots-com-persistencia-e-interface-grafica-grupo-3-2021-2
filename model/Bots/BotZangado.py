@@ -1,5 +1,6 @@
 from Bots.Bot import Bot
-from Comando import Comando
+from model.Comando import Comando
+
 
 class BotZangado(Bot):
     def __init__(self, nome):
@@ -11,7 +12,6 @@ class BotZangado(Bot):
             4: Comando(4, "Adeus", [""])
         }
 
-    
     def mostra_comandos(self):
         return self.__comandos
 

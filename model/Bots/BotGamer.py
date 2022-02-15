@@ -1,7 +1,8 @@
 # from Bots.Bot import Bot
 from datetime import datetime
 from Bots.Bot import Bot
-from Comando import Comando
+from model.Comando import Comando
+
 
 class BotGamer(Bot):
     def __init__(self, nome):
