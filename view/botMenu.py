@@ -1,10 +1,10 @@
 import PySimpleGUI as sg
 
-class Choose_Menu:
-    def _init_(self, lista):
+class BotMenu:
+    def __init__(self, lista):
         self.__lista = lista
         self.__container = []
-        self._window = sg.Window('CHAT BOT').Layout(self._container)
+        self.__window = sg.Window('CHAT BOT').Layout(self.__container)
 
 
     def desenha_menu(self):
@@ -24,7 +24,7 @@ class Choose_Menu:
                   ]
 
         self.__container = layout
-        self._window = sg.Window('CHAT BOT').Layout(self._container)
+        self.__window = sg.Window('CHAT BOT').Layout(self.__container)
 
 
     def le_eventos(self):
